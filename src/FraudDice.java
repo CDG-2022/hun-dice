@@ -2,7 +2,7 @@ import java.util.Random;
 public class FraudDice implements Dice{
     Random random = new Random();
     @Override
-    public int Throw(String mode) {
+    public int roll(String mode) {
 
 
         if(mode.equals("Weak")){

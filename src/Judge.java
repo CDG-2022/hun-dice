@@ -7,10 +7,20 @@ public class Judge {
     public List<Player> call(){
         Scanner sc = new Scanner(System.in);
         ArrayList<Player> list= new ArrayList<>();
+
+
         System.out.print("첫번째 선수입력(일반): 이름");
-        list.add(new Player("일반",sc.next()));
+        Dice dice1 = new NormalDice();
+        Player player1 = new Player(dice1,sc.next());
+
         System.out.print("두번째 선수입력(사기): 이름");
-        list.add(new Player("사기",sc.next()));
+        Dice dice2 = new FraudDice();
+        Player player2 = new Player(dice2,sc.next());
+
+
+        list.add(player1);
+        list.add(player2);
+
         return list;
     }
     public  void recorder(Player p1,Player p2,int x,int num){
